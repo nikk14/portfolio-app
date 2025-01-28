@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, Outlet } from "react-router";
 
 const Navbar = () => {
   return (
@@ -19,6 +19,7 @@ const Navbar = () => {
         </div>
 
       </div>
+      <Outlet />
     </>
   );
 };

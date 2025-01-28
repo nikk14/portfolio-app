@@ -13,14 +13,19 @@ import Details from "./components/Details";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
+
+        <Route element={<Navbar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+
+
 
         <Route path="/college" element={<College />}>
-          <Route path="students" element={<Students />} />
+          <Route index element={<Students />} />
           <Route path="departments" element={<Department />} />
           <Route path="college-details" element={<Details />} />
         </Route>
